@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meteo Madeira</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; background: #f4f6f8; color: #111; }
+    header { background: #0f766e; color: white; padding: 18px; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; padding: 16px; }
+    .card { background: white; border-radius: 16px; padding: 16px; box-shadow: 0 4px 14px #0001; }
+    .status { font-size: 28px; font-weight: bold; }
+    .good { color: #15803d; }
+    .mid { color: #ca8a04; }
+    .bad { color: #dc2626; }
+    a { color: #0f766e; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meteo Madeira</h1>
+    <p>Dashboard personale con dati Open-Meteo</p>
+  </header>
+
+  <main class="grid" id="app"></main>
+
+  <script>
+    const places = [
+      { name: "Funchal", lat: 32.6669, lon: -16.9241, webcam: "https://www.webcammadeira.com/" },
+      { name: "Pico do Arieiro", lat: 32.7358, lon: -16.9286, webcam: "https://www.webcammadeira.com/" },
+      { name: "Porto Moniz", lat: 32.8668
